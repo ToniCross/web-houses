@@ -8,7 +8,7 @@
 
 ## Descrição:
     
-   * A ideia Principal do projeto nasceu de um aplicativo que já existe e se chama "Web Motors", onde pessoas compram, vendem, e negociam veículos terrestres de diversas categorias. Seguindo a mesma linha, a Web Houses irá funcionar da mesma forma, porém com imóveis como: Apartamentos, casas, Terrenos, salas comerciais ...
+   * A ideia Principal do projeto nasceu de um aplicativo que já existe e se chama "Web Motors", onde pessoas compram, vendem, e negociam seus veículos terrestres de diversas categorias. Seguindo a mesma linha, a Web Houses irá funcionar no mesmo prisma, porém com imóveis como: Apartamentos, casas, Terrenos, salas comerciais ...
 
 </br>
 </br>
