@@ -1,11 +1,11 @@
 # Web Houses 
 ### João Victor Toniazzo de Oliveira
-Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em operações comuns de instituições financeiras (ex: saque, depósito, extrato, saldo, cadastro), sendo o diferencial, a cobrança de taxas de forma abusiva para cada operação realizada pelo cliente.
+Este projeto tem como objetivo permitir com que usuários novos sejam cadastrados, que consigam visualizar imóveis diversos, que seja possível favoritar e desfavoritar cards de imóveis, e cadastrar imóveis novos para a plataforma, sem fins lucrativos, e completamnete didádicos para o autor do projeto.
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Design das Telas - Figma: 
-;(
+https://www.figma.com/proto/KpYuWcw7mmzPUi3JTvrNdF/web-houses?node-id=3-6265&t=BqFPUeFtHDuvBnJz-1
 
 ## Design System: 
 Link para o PDF
