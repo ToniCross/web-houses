@@ -19,6 +19,10 @@ rad.json
 #License-file
 *.flf
 #Test results file
+HEAD
 TestResults.xml
 
 /node_modules
+=======
+TestResults.xml
+origin/main
