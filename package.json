@@ -1,0 +1,18 @@
+{
+  "name": "web-houses-main",
+  "version": "1.0.0",
+  "description": "Este projeto tem como objetivo permitir com que usuários novos sejam cadastrados, que consigam visualizar imóveis diversos, que seja possível favoritar e desfavoritar cards de imóveis, e cadastrar imóveis novos para a plataforma, sem fins lucrativos, e completamnete didádicos para o autor do projeto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
