@@ -7302,11 +7302,6 @@ input[type=range]::-ms-thumb {
     opacity: 0;
   }
 }
-.slider {
-
-  height: 10px !important;
-  width: 100%;
-}
 .slider.fullscreen {
   height: 100%;
   width: 100%;
@@ -7323,19 +7318,13 @@ input[type=range]::-ms-thumb {
   z-index: 2;
   bottom: 30px;
 }
-.slider .slides {
-  background-color: #FF6100;
-  margin: 0;
-  height: 400px;
-}
 .slider .slides li {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
-  top: 20%;
   left: 0;
   z-index: 1;
   width: 100%;
-  height: inherit;
+  height: 300px;
   overflow: hidden;
 }
 .slider .slides li img {
@@ -7950,9 +7939,20 @@ body {
 
 /* Atividade 11, tamanhos das imagens em section gallery*/
 /* Telas para tablets */
+@media (min-width: 320px) and (max-width:750px){  
+  .slider .slides{
+    width: 100vw;
+    height: 100px;
+  }
+}
 @media (min-width: 768px) {
   body {
     font-size: 1.125rem;
+  }
+  
+  .slider .slides{
+    width: 100vw;
+    height: 150px;
   }
 }
 /* Telas para laptops */
@@ -8006,11 +8006,9 @@ h6 {
 /* Apartir daqui começa as configurações de layout do index */
 
 .slider .slides li {
-  /*Isso aqui é para telas menores*/
-  top: 15%;
-  height: 250px !important;
+  top: 10vw;
 }
 
-.slider{
-  height: 250px;
+.slider .slides{
+  background-color: #FF6100;
 }
