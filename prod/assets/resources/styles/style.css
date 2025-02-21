@@ -7318,29 +7318,6 @@ input[type=range]::-ms-thumb {
   z-index: 2;
   bottom: 30px;
 }
-.slider .slides li {
-  opacity: 1;
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-.slider .slides li img {
-  height: 40%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.slider .slides li .caption {
-  color: #fff;
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  opacity: 0;
-}
 .slider .slides li .caption p {
   color: #e0e0e0;
 }
@@ -7937,34 +7914,68 @@ body {
      object-fit: cover;
 }
 
-/* Atividade 11, tamanhos das imagens em section gallery*/
-/* Telas para tablets */
-@media (min-width: 320px) and (max-width:750px){  
-  .slider .slides{
-    width: 100vw;
-    height: 100px;
+/* Telas menores */
+@media (max-width: 425px) {
+  .slides,
+  .slider {
+    display: none !important;
   }
 }
+/* Telas para telefones L */
+@media (min-width: 425px){ 
+  .slider .slides li {
+    top: clamp(6rem, 0.8vw + 2vw, 6rem) !important;
+  } 
+  .slides, .slider{
+    height: 150px !important;
+  }
+}
+/* Telas para tablets */
 @media (min-width: 768px) {
   body {
     font-size: 1.125rem;
   }
-  
-  .slider .slides{
-    width: 100vw;
-    height: 150px;
-  }
+  .slider .slides li {
+    top: 10vw;
+  } 
 }
 /* Telas para laptops */
 @media (min-width: 1024px) {
   body {
     font-size: 1.25rem;
   }
+  .slides, .slider{
+    height: 210px !important;
+  }
+  .slider .slides li img {
+    height: 60% !important;
+  }
 }
 /* Telas para desktops */
 @media (min-width: 1200px) {
   body {
     font-size: 1.5rem;
+  }
+  .slides, .slider{
+    height: 250px !important;
+  }
+  .slider .slides li img {
+    height: 70% !important;
+  }
+}
+/* Telas para 4k */
+@media (min-width: 2000px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .slides, .slider{
+    height: 500px !important;
+  }
+  .slider .slides li img {
+    height: 150% !important;
+  }
+  .slider .slides li {
+    overflow: visible !important;
   }
 }
 .step-0 {
@@ -8005,10 +8016,30 @@ h6 {
 
 /* Apartir daqui começa as configurações de layout do index */
 
-.slider .slides li {
-  top: 10vw;
-}
-
 .slider .slides{
   background-color: #FF6100;
+}
+
+.slider .slides li {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.slider .slides li img {
+  height: 40%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.slider .slides li .caption {
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  opacity: 0;
 }
