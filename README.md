@@ -88,9 +88,3 @@ Link para o PDF
 - O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
   - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`
 - Executar o projeto frontend.
-
-## Telas da aplicação
-
-![image](https://github.com/user-attachments/assets/05283ef1-8986-437c-a9a9-55bd99c36727)
-![image](https://github.com/user-attachments/assets/b38a3b57-c182-4a65-84f1-7a2707ec44ea)
-![image](https://github.com/user-attachments/assets/d62133be-d584-4d7d-8f9b-fcbfff5360c3)

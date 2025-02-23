@@ -39,33 +39,24 @@
 
   <body>
     <!-- navbar -->
-    <div id="navbar" class="navbar-fixed">
+    <div class="navbar-fixed">
       <nav class="">
         <div class="container">
           <div class="nav-wrapper">
-            <a href="/prod/index.html" class="brand-logo step-0">Guaratur</a>
+            <a href="index.html" class="brand-logo em">WebHouses</a>
             <!-- hamburger icon for the mobile menu -->
             <a href="#" data-target="slide-out" class="sidenav-trigger">
               <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="index.html#home">Início</a>
+                <a href="index.html">Início</a>
               </li>
               <li>
-                <a href="index.html#search">Busca</a>
+                <a href="cadastro-propriedades.html">Novas propriedades</a>
               </li>
               <li>
-                <a href="index.html#popular">Pontos Turísticos</a>
-              </li>
-              <li>
-                <a href="index.html#gallery">Galeria</a>
-              </li>
-              <li>
-                <a href="index.html#contact">Contato</a>
-              </li>
-              <li>
-                <a href="acomodacoes-guarapuava.html">Acomodações</a>
+                <a href="cadastro-usuario.html">Usuários</a>
               </li>
             </ul>
           </div>
@@ -75,374 +66,48 @@
     <!-- navbar -->
 
     <!-- painel de navegação lateral -->
-    <ul id="slide-out" class="sidenav">
+    <ul class="sidenav" id="slide-out">
       <li>
-        <a href="/prod/index.html">Início</a>
+        <a href="index.html">Início</a>
       </li>
       <li>
-        <a href="#search">Busca</a>
+        <a href="cadastro-propriedades.html">Novas propriedades</a>
       </li>
       <li>
-        <a href="#popular">Pontos Turísticos</a>
-      </li>
-      <li>
-        <a href="#gallery">Galeria</a>
-      </li>
-      <li>
-        <a href="#contact">Contato</a>
-      </li>
-      <li>
-        <a href="acomodacoes-guarapuava.html">Acomodações Guarapuava</a>
+        <a href="cadastro-usuario.html">Usuários</a>
       </li>
     </ul>
     <!-- painel de navegação lateral -->
 
     <!-- main -->
     <main>
-      <!-- section - cards de acomodações -->
-      <section id="cards-acomodacoes" class="section scrollspy">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,q_100/v1730848107/3_d3rgeo.jpg"
-                    srcset="
-                      https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,q_100/v1730848107/3_d3rgeo.jpg    500w,
-                      https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_1000,h_1000,q_100/v1730848107/3_d3rgeo.jpg 1000w,
-                      https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_1500,h_1500,q_100/v1730848107/3_d3rgeo.jpg 1500w
-                    "
-                    sizes="(max-width: 600px) 100vw, 50vw"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <div class="card-title-background">
-                    <span class="card-title">Hotel em Santa Cruz</span>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 5,0 (467)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$500 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731295121/1_euq25s.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Apartamento Flat do João</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Executive</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 5,0
-                  (1.578)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$850 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731294245/3_wxfkna.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Pousada Três Irmãos</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Simple</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 2,5 (24)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$35 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1730848107/2_qgakln.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Hotel em São Cristóvão</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Simple</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 3,8 (249)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$290 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731294245/1_tbgqts.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Pousada Brisa das Montanhas</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 4,9 (699)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$350 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1730848108/4_mzjd83.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Hotel em Cidade dos Lagos</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Executive</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 4,7 (873)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$450 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731294245/4_urdkdm.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Pousada Lagoa das Lágrimas</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Standard</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 4,8 (957)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$275 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731295121/2_mwd046.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Apartamento do Roni</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 5,0
-                  (12.469)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$24.000 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1730848108/5_vb8njm.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Hotel em Baixada Jordão</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 5,0
-                  (1.861)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$1.900 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1730848108/1_ch04p1.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Hotel em Alto Santana</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Standard</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 4,5 (155)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$700 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731294245/2_pdjfx5.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Pousada Recanto do Paraíso</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 5,0
-                  (2.134)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$4.000 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card">
-                <div class="card-image">
-                  <img
-                    src="https://res.cloudinary.com/dp0q82phu/image/upload/c_crop,w_500,h_500,ar_1:1/v1731295121/3_q2u6yo.jpg"
-                    alt="Image"
-                    class="responsive-img minha-imagem"
-                  />
-                  <span class="card-title">Apartamento do Toni</span>
-                </div>
-                <div class="card-content">
-                  <h6 class="font-bold">Diamond</h6>
-                  <div class="col s12 center"></div>
-                  <i class="material-icons tiny black-text">stars</i> 4,2 (235)
-                  <br />
-                  <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin egestas nibh id ligula suscipit posuere.
-                  </p>
-                  <br />
-                  <p class="price">R$1.200 noite</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Reservar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section - cards de acomodações -->
+      <div class="container">
+        <h4>Cadastro de imóveis</h4>
+
+        <!-- section formulário de cadastro -->
+        <form id="formCadastro">
+          <label for="imagem">Imagem (URL):</label>
+          <input type="url" id="imagem" />
+
+          <label for="valor">Valor (R$):</label>
+          <input
+            type="text"
+            id="valor"
+            required
+            pattern="^\d+(\.\d{1,2})?$"
+            title="Insira um valor numérico válido."
+          />
+
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" required />
+
+          <label for="tamanho">Tamanho (m²):</label>
+          <input type="number" id="tamanho" required />
+
+          <button type="submit">Cadastrar</button>
+        </form>
+        <!-- section - cards de acomodações -->
+      </div>
     </main>
     <!-- main -->
 
@@ -452,81 +117,32 @@
     </footer>
     <!-- footer -->
 
-    <script src="assets/libraries/jquery/jquery-3.3.1.min.js"></script>
-    <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/resources/scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- JS pra fazer funcionar o popper do bootstrap -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("formCadastro")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const imagem = document.getElementById("imagem").value;
+          const valor = document.getElementById("valor").value;
+          const descricao = document.getElementById("descricao").value;
+          const tamanho = document.getElementById("tamanho").value;
+
+          const propriedade = { imagem, valor, descricao, tamanho };
+
+          let propriedades =
+            JSON.parse(localStorage.getItem("propriedades")) || [];
+          propriedades.push(propriedade);
+          localStorage.setItem("propriedades", JSON.stringify(propriedades));
+
+          alert("Imóvel cadastrado com sucesso!");
+          this.reset();
+        });
+    </script>
   </body>
-
-  <!--
-
-      trem de deixar uma caixinha de contato
-      
-    <section id="contact" class="section scrollspy">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 l6 offset-l3">
-            <div class="card-panel black-text center">
-              <i class="material-icons medium">email</i>
-              <h5>Entre em contato</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit sint repellat maxime hic eum corporis, alias
-                asperiores dolore culpa repellendus.
-              </p>
-            </div>
-          </div>
-          <div class="col s12 l6 offset-l3">
-            <div class="card-panel grey lighten-3">
-              <h5 class="form-header">Por favor, preencha o formulário.</h5>
-              <div class="input-field">
-                <input type="text" id="name" />
-                <label for="name">Nome</label>
-              </div>
-              <div class="input-field">
-                <input type="email" id="email" />
-                <label for="email">Email</label>
-              </div>
-              <div class="input-field">
-                <input type="text" id="phone" />
-                <label for="phone">Telefone</label>
-              </div>
-              <div class="input-field">
-                <textarea
-                  class="materialize-textarea"
-                  id="message"
-                ></textarea>
-                <label for="message">Mensagem</label>
-              </div>
-              <input type="submit" value="Enviar" class="btn" />
-            </div>
-          </div>
-          <div class="col s12 hide-on-med-and-down">
-            <ul class="collection with-header">
-              <li class="collection-header">
-                <h4>Localização</h4>
-              </li>
-              <li class="collection-item">Guaratur</li>
-              <li class="collection-item">Rua das Flores, 123</li>
-              <li class="collection-item">Guarapuava - PR</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    -->
-
-  <!--
-    
-    $font-size-small: 0.875rem;
-    $font-size-medium: 1rem;
-    $font-size-large: 1.125rem;
-    $font-size-extra-large: 1.25rem;
-    $font-size-extra-extra-large: 1.5rem;
-    $font-size-xx-large: 2rem;
-    
-      -->
 </html>

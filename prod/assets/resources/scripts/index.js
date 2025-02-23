@@ -30,3 +30,20 @@ $(document).ready(function () {
     // INIT SCROLLSPY
     $('.scrollspy').scrollSpy();
 });
+
+function validarCPF() {
+    let cpf = document.getElementById("cpf").value;
+    let regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/; // Formato: 000.000.000-00
+    if (!regex.test(cpf)) {
+      document.getElementById("cpf-erro").innerText = "CPF inválido!";
+    } else {
+      document.getElementById("cpf-erro").innerText = "CPF válido!";
+    }
+  }
+
+  // Salvar um nome no armazenamento
+localStorage.setItem("nome", "João");
+
+// Recuperar o nome salvo
+let nomeSalvo = localStorage.getItem("nome");
+console.log(nomeSalvo); // João

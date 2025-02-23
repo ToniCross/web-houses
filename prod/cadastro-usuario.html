@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro e Login</title>
+
+    <!--Import Google Icon Font-->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/resources/styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="scrollspy">
+    <!-- navbar -->
+    <div class="navbar-fixed">
+      <nav class="">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo em">WebHouses</a>
+            <!-- hamburger icon for the mobile menu -->
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="index.html">Início</a>
+              </li>
+              <li>
+                <a href="cadastro-propriedades.html">Novas propriedades</a>
+              </li>
+              <li>
+                <a href="cadastro-usuario.html">Usuários</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- navbar -->
+
+    <!-- painel de navegação lateral -->
+    <ul class="sidenav" id="slide-out">
+      <li>
+        <a href="index.html">Início</a>
+      </li>
+      <li>
+        <a href="cadastro-propriedades.html">Novas propriedades</a>
+      </li>
+      <li>
+        <a href="cadastro-usuario.html">Usuários</a>
+      </li>
+    </ul>
+    <!-- painel de navegação lateral -->
+
+    <div class="container">
+      <h2>Cadastro de Usuário</h2>
+      <form id="cadastroForm">
+        <input
+          type="text"
+          id="nome"
+          placeholder="Nome"
+          class="form-control mb-2"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="E-mail"
+          class="form-control mb-2"
+          required
+        />
+        <input
+          type="password"
+          id="senha"
+          placeholder="Senha"
+          class="form-control mb-2"
+          required
+          minlength="8"
+        />
+        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+        <div id="msgCadastro" class="mt-2 text-center"></div>
+      </form>
+
+      <h2 class="mt-4">Login</h2>
+      <form id="loginForm">
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="E-mail"
+          class="form-control mb-2"
+          required
+        />
+        <input
+          type="password"
+          id="loginSenha"
+          placeholder="Senha"
+          class="form-control mb-2"
+          required
+        />
+        <button type="submit" class="btn btn-success w-100">Entrar</button>
+        <div id="msgLogin" class="mt-2 text-center"></div>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer class="rodape section white-text center">
+      <section class="section white-text center">
+        <div class="container">
+          <div class="row">
+            <div class="col s3">
+              <a href="https://facebook.com" target="_blank" class="white-text">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="#!" target="_blank" class="white-text">
+                <i class="fab fa-twitter-square fa-2x"></i>
+              </a>
+              <a
+                href="https://googleplus.com"
+                target="_blank"
+                class="white-text"
+              >
+                <i class="fab fa-google-plus-square fa-2x"></i>
+              </a>
+              <a
+                href="https://pinterest.com"
+                target="_blank"
+                class="white-text"
+              >
+                <i class="fab fa-pinterest-square fa-2x"></i>
+              </a>
+            </div>
+
+            <p id="webHouses-copy" class="flow-text white-text">
+              WebHouses &copy; 2025
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- footer -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/resources/scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      function getUsuarios() {
+        return JSON.parse(localStorage.getItem("usuarios")) || [];
+      }
+
+      function salvarUsuarios(usuarios) {
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      }
+
+      document
+        .getElementById("cadastroForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let nome = document.getElementById("nome").value;
+          let email = document.getElementById("email").value;
+          let senha = document.getElementById("senha").value;
+          let usuarios = getUsuarios();
+
+          if (usuarios.some((u) => u.email === email)) {
+            document.getElementById(
+              "msgCadastro"
+            ).innerHTML = `<span class="text-danger">E-mail já cadastrado!</span>`;
+            return;
+          }
+
+          usuarios.push({ nome, email, senha });
+          salvarUsuarios(usuarios);
+          document.getElementById(
+            "msgCadastro"
+          ).innerHTML = `<span class="text-success">Cadastro realizado com sucesso!</span>`;
+          document.getElementById("cadastroForm").reset();
+        });
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let email = document.getElementById("loginEmail").value;
+          let senha = document.getElementById("loginSenha").value;
+          let usuarios = getUsuarios();
+
+          let usuario = usuarios.find(
+            (u) => u.email === email && u.senha === senha
+          );
+          if (usuario) {
+            document.getElementById(
+              "msgLogin"
+            ).innerHTML = `<span class="text-success">Login bem-sucedido! Bem-vindo, ${usuario.nome}!</span>`;
+          } else {
+            document.getElementById(
+              "msgLogin"
+            ).innerHTML = `<span class="text-danger">E-mail ou senha inválidos!</span>`;
+          }
+        });
+    </script>
+  </body>
+</html>

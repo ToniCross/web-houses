@@ -11,12 +11,9 @@
       href="http://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <!-- Import Font Awesome Icon Font -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
     <!-- CDN do Bootstrap -->
@@ -44,16 +41,16 @@
             </a>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="#home">Início</a>
+                <a href="index.html">Início</a>
               </li>
               <li>
                 <a href="#contact">Contato</a>
               </li>
               <li>
-                <a href="#catalago">Catálago</a>
+                <a href="cadastro-propriedades.html">Novas propriedades</a>
               </li>
               <li>
-                <a href="acomodacoes-guarapuava.html">Novas propriedades</a>
+                <a href="cadastro-usuario.html">Usuários</a>
               </li>
             </ul>
           </div>
@@ -65,16 +62,16 @@
     <!-- painel de navegação lateral -->
     <ul class="sidenav" id="slide-out">
       <li>
-        <a href="#home">Início</a>
+        <a href="index.html">Início</a>
       </li>
       <li>
         <a href="#contact">Contato</a>
       </li>
       <li>
-        <a href="#catalago">Catálago</a>
+        <a href="cadastro-propriedades.html">Novas propriedades</a>
       </li>
       <li>
-        <a href="acomodacoes-guarapuava.html">Novas propriedades</a>
+        <a href="cadastro-usuario.html">Usuários</a>
       </li>
     </ul>
     <!-- painel de navegação lateral -->
@@ -116,7 +113,7 @@
       <section class="section scrollspy">
         <div class="container mt-4">
           <h4>Imóveis à venda</h4>
-          <div class="row">
+          <div id="catalogo" class="row">
             <div class="col-12 col-md-6 col-lg-3 mb-4">
               <div class="card">
                 <img
@@ -185,7 +182,7 @@
       <!-- section - galeria -->
       <section id="gallery" class="section scrollspy">
         <div class="container">
-          <h3>Galeria dos imóveis de vitrine</h3>
+          <h4>Galeria dos imóveis de vitrine</h4>
           <div class="row">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="img-container">
@@ -273,6 +270,31 @@
       </section>
       <!-- section - galeria -->
 
+      <!-- Cartão de Contato -->
+      <section id="contact" class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="card text-center shadow-lg">
+              <div class="card-body">
+                <h5 class="card-title">Entre em Contato Conosco!</h5>
+                <p class="card-text">
+                  Fale com nosso vendedor para mais informações!
+                </p>
+                <hr />
+                <p class="fw-bold">João Victor Toniazzo de Oliveira</p>
+                <p>
+                  <i class="fas fa-envelope"></i>
+                  joaooliveira.2021@alunos.utfpr.edu.br
+                </p>
+                <a href="mailto:joao.vendas@email.com" class="btn btn-primary">
+                  Enviar E-mail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- footer -->
       <footer class="rodape section white-text center">
         <section class="section white-text center">
@@ -324,6 +346,45 @@
           var elems = document.querySelectorAll(".sidenav");
           M.Sidenav.init(elems);
         });
+
+        document.addEventListener("click", (event) => {
+          if (event.target.classList.contains("btn-saiba-mais")) {
+            const card = event.target.closest(".col-12");
+            const valor = card.querySelector(".card-title").textContent.trim();
+
+            removerImovel(valor);
+            card.remove();
+          }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const catalogo = document.getElementById("catalogo");
+          let propriedades =
+            JSON.parse(localStorage.getItem("propriedades")) || [];
+
+          propriedades.forEach((prop) => {
+            const card = document.createElement("div");
+            card.className = "col-12 col-md-6 col-lg-3 mb-4";
+            card.innerHTML = `
+                <div class="card">
+                  <img src="${prop.imagem}" class="card-img-top" alt="Imagem do Imóvel">
+                  <div class="card-body">
+                    <h5 class="card-title">R$${prop.valor}</h5>
+                    <p class="card-text">${prop.descricao}</p>
+                    <p class="card-text"><small>${prop.tamanho} m²</small></p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                  </div>
+                </div>
+              `;
+            catalogo.appendChild(card);
+          });
+        });
+
+        function removerImovel(valor) {
+          let imoveis = JSON.parse(localStorage.getItem("imoveis")) || [];
+          imoveis = imoveis.filter((imovel) => imovel.valor !== valor);
+          localStorage.setItem("imoveis", JSON.stringify(imoveis));
+        }
       </script>
     </main>
     <!-- main -->
