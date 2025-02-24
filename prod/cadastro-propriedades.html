@@ -19,22 +19,8 @@
       crossorigin="anonymous"
     />
 
-    <!-- Estilos CSS do Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-
     <!-- styles -->
     <link rel="stylesheet" href="assets/resources/styles/style.css" />
-
-    <link rel="icon" type="image/png" href="favicon.png" />
-
-    <!-- Referência para o nodemodules-->
-    <link
-      rel="stylesheet"
-      href="node_modules/materialize-css/dist/css/materialize.min.css"
-    />
   </head>
 
   <body>
@@ -122,27 +108,6 @@
     <script src="assets/resources/scripts/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script>
-      document
-        .getElementById("formCadastro")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const imagem = document.getElementById("imagem").value;
-          const valor = document.getElementById("valor").value;
-          const descricao = document.getElementById("descricao").value;
-          const tamanho = document.getElementById("tamanho").value;
-
-          const propriedade = { imagem, valor, descricao, tamanho };
-
-          let propriedades =
-            JSON.parse(localStorage.getItem("propriedades")) || [];
-          propriedades.push(propriedade);
-          localStorage.setItem("propriedades", JSON.stringify(propriedades));
-
-          alert("Imóvel cadastrado com sucesso!");
-          this.reset();
-        });
-    </script>
+    <script src="/prod/assets/resources/scripts/index.js"></script>
   </body>
 </html>
