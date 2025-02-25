@@ -7320,29 +7320,9 @@ input[type=range]::-ms-thumb {
 .slider .slides li.active {
   z-index: 2;
 }
-.slider .indicators {
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-}
-.slider .indicators .indicator-item {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 0 12px;
-  background-color: #e0e0e0;
-  transition: background-color 0.3s;
-  border-radius: 50%;
-}
 .slider .indicators .indicator-item.active {
   background-color: #4CAF50;
 }
-
 .carousel {
   overflow: hidden;
   position: relative;
@@ -7961,7 +7941,7 @@ body {
 /* Telas para 4k */
 @media (min-width: 2000px) {
   body {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .slides, .slider{
     height: 500px !important;
