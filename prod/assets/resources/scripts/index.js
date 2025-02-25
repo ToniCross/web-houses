@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function carregarImoveis() {
     const catalogo = document.getElementById("catalogo");
     let propriedades = JSON.parse(localStorage.getItem("propriedades")) || [];
-    catalogo.innerHTML = "";
+    //catalogo.innerHTML = "";
   
     propriedades.forEach((prop) => {
       const card = document.createElement("div");
