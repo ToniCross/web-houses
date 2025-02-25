@@ -82,6 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
   
       propriedades.push(propriedade);
       localStorage.setItem("propriedades", JSON.stringify(propriedades));
+
+        fetch("http://localhost:3000/imoveis", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(propriedade)
+        })
+        .then(response => response.json())
+        .then(data => {
+        alert("Imóvel cadastrado com sucesso!");
+        this.reset();
+        carregarImoveis();
+        })
+        .catch(error => console.error('Erro ao cadastrar imóvel:', error));
   
       alert("Imóvel cadastrado com sucesso!");
       this.reset();
